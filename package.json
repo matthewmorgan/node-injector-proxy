@@ -1,0 +1,26 @@
+{
+  "name": "proxy-server",
+  "version": "1.0.0",
+  "description": "Simple node proxy server that allows inline manipulation of response",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/matthewmorgan/node-injector-proxy.git"
+  },
+  "author": "Matthew Morgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthewmorgan/node-injector-proxy/issues"
+  },
+  "homepage": "https://github.com/matthewmorgan/node-injector-proxy#readme"
+}

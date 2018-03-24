@@ -1,0 +1,22 @@
+version: '2.1'
+services:
+  traefik:
+    image: traefik
+    restart: always
+    command: --web --docker --docker.domain=docker.localhost --logLevel=DEBUG
+    ports:
+      - "80:80"
+      - "8080:80"
+      - "443:443"
+    container_name: traefik
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /dev/null:/traefik.toml
+  proxy:
+    image: 3b533cef5b55
+    restart: always
+    labels:
+      traefik.port: "3000"
+      traefik.default.protocol: http
+      traefik.backend: proxy
+      traefik.frontend.rule: "PathPrefix: /"
